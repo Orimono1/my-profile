@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORIMONO | Design Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'fade-in-left': 'fadeInLeft 1s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeInLeft: {
+                            '0%': { opacity: '0', transform: 'translateX(20px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .font-serif { font-family: 'Noto Serif JP', serif; }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-[#FDFBF7] text-slate-800 selection:bg-slate-900 selection:text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-8 bg-transparent">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="font-serif text-2xl tracking-widest font-bold z-50 text-slate-900">
+                ORIMONO<span class="text-red-600">.</span>
+            </div>
+            <div class="hidden md:flex space-x-12 text-xs tracking-[0.15em] font-medium text-slate-600">
+                <a href="#about" class="hover:text-black transition-colors relative group">
+                    ABOUT
+                    <span class="absolute -bottom-2 left-0 w-0 h-[1px] bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#works" class="hover:text-black transition-colors relative group">
+                    WORKS
+                    <span class="absolute -bottom-2 left-0 w-0 h-[1px] bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#service" class="hover:text-black transition-colors relative group">
+                    SERVICE
+                    <span class="absolute -bottom-2 left-0 w-0 h-[1px] bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#contact" class="hover:text-black transition-colors relative group">
+                    CONTACT
+                    <span class="absolute -bottom-2 left-0 w-0 h-[1px] bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </div>
+            <a href="https://coconala.com/" target="_blank" rel="noopener noreferrer" class="hidden md:flex items-center gap-2 bg-slate-900 text-white px-6 py-2 text-xs tracking-widest hover:bg-red-600 transition-colors duration-300">
+                COCONALA
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Abstract Background Lines -->
+        <div class="absolute inset-0 pointer-events-none opacity-20">
+            <div class="absolute top-[20%] left-[10%] w-[1px] h-[40%] bg-gradient-to-b from-transparent via-slate-400 to-transparent"></div>
+            <div class="absolute top-[30%] right-[15%] w-[1px] h-[50%] bg-gradient-to-b from-transparent via-slate-400 to-transparent"></div>
+            <div class="absolute top-[60%] left-[20%] w-[30%] h-[1px] bg-gradient-to-r from-transparent via-slate-400 to-transparent"></div>
+        </div>
+
+        <div class="max-w-7xl w-full mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-7">
+                <p class="text-red-600 tracking-[0.3em] text-xs font-bold mb-6 animate-fade-in-up">
+                    DESIGN PORTFOLIO
+                </p>
+                <h1 class="text-5xl md:text-8xl lg:text-9xl font-serif font-medium leading-[0.9] text-slate-900 mb-8 animate-fade-in-up delay-100">
+                    Weaving<br/>
+                    <span class="italic font-light text-slate-600">Logic</span> & <br/>
+                    Emotion.
+                </h1>
+                <p class="text-slate-500 leading-relaxed max-w-md animate-fade-in-up delay-200 text-sm md:text-base text-justify">
+                    デザインは、単なる装飾ではありません。
+                    それはクライアントの想いと、受け手の心を繋ぐ「織物（オリモノ）」です。
+                    緻密な計算と豊かな感性で、世界に一つだけの価値を紡ぎ出します。
+                </p>
+                
+                <div class="mt-12 flex items-center gap-4 animate-fade-in-up delay-300">
+                    <a href="#works" class="group flex items-center gap-4 px-8 py-4 border border-slate-900 hover:bg-slate-900 hover:text-white transition-all duration-300">
+                        <span class="text-sm tracking-widest">VIEW WORKS</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-2 transition-transform"><path d="M18 8L22 12L18 16"></path><path d="M2 12H22"></path></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="md:col-span-5 relative hidden md:block h-[600px] w-full animate-fade-in-left delay-300">
+                <div class="absolute inset-0 bg-slate-200 overflow-hidden">
+                   <img src="https://images.unsplash.com/photo-1490100667990-4fced8021649?auto=format&fit=crop&q=80&w=1000" alt="Texture" class="w-full h-full object-cover opacity-80 mix-blend-multiply hover:scale-105 transition-transform duration-[2s]">
+                   <div class="absolute inset-0 bg-gradient-to-t from-[#FDFBF7] to-transparent opacity-20"></div>
+                </div>
+                <div class="absolute -bottom-10 -left-10 bg-white p-6 shadow-xl max-w-xs border-l-4 border-red-600">
+                    <p class="text-xs text-slate-400 mb-1 tracking-widest">CONCEPT</p>
+                    <p class="font-serif text-xl italic text-slate-800">"Make it Simple, but Significant."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                <div>
+                    <div class="mb-12 text-left">
+                        <h2 class="text-6xl md:text-8xl font-thin tracking-tighter text-slate-900 mb-2 font-serif opacity-90">About</h2>
+                        <p class="text-sm tracking-[0.2em] text-slate-500 uppercase font-medium ml-1">私について</p>
+                    </div>
+                    <div class="prose prose-lg text-slate-600 text-justify">
+                        <p class="mb-6 font-medium text-slate-800 text-xl leading-relaxed">
+                            ココナラにて、ロゴデザイン・Webバナー・DTP制作を中心に活動しております。<br/>
+                            <span class="text-red-600 inline-block mt-2">『伝わる』デザインで、あなたのビジネスを加速させます。</span>
+                        </p>
+                        <p class="mb-6 text-sm md:text-base leading-loose">
+                            ただ美しいものを作るのではなく、その背後にあるストーリーや目的を深く理解し、視覚化することを大切にしています。
+                            丁寧なヒアリングと、迅速かつ柔軟な対応で、多くのクライアント様より高評価をいただいております。
+                        </p>
+                        
+                        <div class="mt-12 space-y-6">
+                            <div>
+                                <div class="flex justify-between text-xs tracking-widest mb-2 font-bold"><span>Photoshop</span><span>95%</span></div>
+                                <div class="h-[1px] w-full bg-slate-200"><div class="h-full bg-slate-900" style="width: 95%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs tracking-widest mb-2 font-bold"><span>Illustrator</span><span>90%</span></div>
+                                <div class="h-[1px] w-full bg-slate-200"><div class="h-full bg-slate-900" style="width: 90%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs tracking-widest mb-2 font-bold"><span>Figma</span><span>85%</span></div>
+                                <div class="h-[1px] w-full bg-slate-200"><div class="h-full bg-slate-900" style="width: 85%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs tracking-widest mb-2 font-bold"><span>Typography</span><span>100%</span></div>
+                                <div class="h-[1px] w-full bg-slate-200"><div class="h-full bg-slate-900" style="width: 100%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative pt-12 md:pt-32">
+                    <div class="relative z-10 bg-white p-8 shadow-2xl border border-slate-100">
+                        <h3 class="text-sm tracking-widest text-slate-400 mb-6 uppercase border-b pb-4">Profile Info</h3>
+                        <dl class="space-y-4 text-sm">
+                            <div class="grid grid-cols-3 gap-4">
+                                <dt class="text-slate-500">Name</dt>
+                                <dd class="col-span-2 font-medium">ORIMONO (オリモノ)</dd>
+                            </div>
+                            <div class="grid grid-cols-3 gap-4">
+                                <dt class="text-slate-500">Role</dt>
+                                <dd class="col-span-2 font-medium">Graphic / Web Designer</dd>
+                            </div>
+                            <div class="grid grid-cols-3 gap-4">
+                                <dt class="text-slate-500">Experience</dt>
+                                <dd class="col-span-2 font-medium">5+ Years</dd>
+                            </div>
+                            <div class="grid grid-cols-3 gap-4">
+                                <dt class="text-slate-500">Style</dt>
+                                <dd class="col-span-2 font-medium">Minimal, Modern, Japanese</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="absolute top-0 right-0 w-full h-full border border-slate-300 -z-0 translate-x-4 -translate-y-4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="service" class="py-32 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="mb-12 text-left">
+                <h2 class="text-6xl md:text-8xl font-thin tracking-tighter text-white mb-2 font-serif opacity-90">Services</h2>
+                <p class="text-sm tracking-[0.2em] text-slate-500 uppercase font-medium ml-1">提供できること</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                <!-- Service 1 -->
+                <div class="group p-8 border border-white/10 hover:bg-white/5 transition-all duration-300 hover:border-red-600/50 relative">
+                    <div class="absolute top-0 left-0 w-0 h-[2px] bg-red-600 transition-all duration-500 group-hover:w-full"></div>
+                    <div class="text-red-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-serif mb-4">Logo & Branding</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed text-justify">
+                        企業の顔となるロゴデザイン。コンセプトの立案から、名刺や封筒への展開まで、トータルでブランディングをサポートします。
+                    </p>
+                </div>
+                <!-- Service 2 -->
+                <div class="group p-8 border border-white/10 hover:bg-white/5 transition-all duration-300 hover:border-red-600/50 relative">
+                    <div class="absolute top-0 left-0 w-0 h-[2px] bg-red-600 transition-all duration-500 group-hover:w-full"></div>
+                    <div class="text-red-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 11.85-9.17 4.16a2 2 0 0 1-1.66 0L2 11.85"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-serif mb-4">Graphic Design</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed text-justify">
+                        チラシ、パンフレット、ポスターなど。紙媒体ならではの質感やレイアウトへのこだわりで、手に取った人の心を動かします。
+                    </p>
+                </div>
+                <!-- Service 3 -->
+                <div class="group p-8 border border-white/10 hover:bg-white/5 transition-all duration-300 hover:border-red-600/50 relative">
+                    <div class="absolute top-0 left-0 w-0 h-[2px] bg-red-600 transition-all duration-500 group-hover:w-full"></div>
+                    <div class="text-red-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-serif mb-4">Web Design</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed text-justify">
+                        バナー画像、LPデザイン、HP制作。ユーザー目線に立ったUI設計と、ブランドイメージを両立させたWebデザインを提供します。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Section -->
+    <section id="works" class="py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div class="mb-12 md:mb-0 text-left">
+                    <h2 class="text-6xl md:text-8xl font-thin tracking-tighter text-slate-900 mb-2 font-serif opacity-90">Works</h2>
+                    <p class="text-sm tracking-[0.2em] text-slate-500 uppercase font-medium ml-1">制作実績</p>
+                </div>
+                <a href="#" class="hidden md:flex items-center gap-2 text-sm tracking-widest hover:text-red-600 transition-colors mb-12">
+                    VIEW ALL <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-y-16">
+                <!-- Item 1 -->
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden mb-6 relative">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&q=80&w=800" alt="Work" class="w-full aspect-[4/3] object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out"/>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-xs text-red-600 tracking-widest mb-1">Logo / Branding</p>
+                            <h3 class="text-2xl font-serif text-slate-900 group-hover:text-slate-600 transition-colors">Brand Identity</h3>
+                        </div>
+                    </div>
+                    <p class="mt-2 text-sm text-slate-500 line-clamp-1">ミニマルで力強い企業ロゴデザイン</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden mb-6 relative">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1541560052-77ec1bbc09f7?auto=format&fit=crop&q=80&w=800" alt="Work" class="w-full aspect-[4/3] object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out"/>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-xs text-red-600 tracking-widest mb-1">Print / Layout</p>
+                            <h3 class="text-2xl font-serif text-slate-900 group-hover:text-slate-600 transition-colors">Editorial Design</h3>
+                        </div>
+                    </div>
+                    <p class="mt-2 text-sm text-slate-500 line-clamp-1">視線を誘導する雑誌エディトリアル</p>
+                </div>
+                <!-- Item 3 -->
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden mb-6 relative">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=800" alt="Work" class="w-full aspect-[4/3] object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out"/>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-xs text-red-600 tracking-widest mb-1">UI / UX</p>
+                            <h3 class="text-2xl font-serif text-slate-900 group-hover:text-slate-600 transition-colors">Web Experience</h3>
+                        </div>
+                    </div>
+                    <p class="mt-2 text-sm text-slate-500 line-clamp-1">ユーザー体験を最大化するWebデザイン</p>
+                </div>
+                <!-- Item 4 -->
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden mb-6 relative">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=800" alt="Work" class="w-full aspect-[4/3] object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out"/>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-xs text-red-600 tracking-widest mb-1">Product</p>
+                            <h3 class="text-2xl font-serif text-slate-900 group-hover:text-slate-600 transition-colors">Package Design</h3>
+                        </div>
+                    </div>
+                    <p class="mt-2 text-sm text-slate-500 line-clamp-1">手触りまで想像させるパッケージ</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center md:hidden">
+                <a href="#" class="inline-flex items-center gap-2 text-sm tracking-widest border-b border-slate-900 pb-1">
+                    VIEW ALL WORKS <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 bg-[#F5F2EB] relative">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="text-red-600 tracking-[0.3em] text-xs font-bold mb-6">CONTACT ME</p>
+            <h2 class="text-5xl md:text-7xl font-serif text-slate-900 mb-8">
+                Let's weave something<br/>beautiful together.
+            </h2>
+            <p class="text-slate-600 mb-12 max-w-xl mx-auto leading-loose">
+                制作のご依頼、お見積もりのご相談など、お気軽にお問い合わせください。<br/>
+                ココナラのメッセージ機能にてお待ちしております。
+            </p>
+            
+            <a href="https://coconala.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-4 bg-slate-900 text-white px-10 py-5 hover:bg-red-600 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1">
+                <span class="tracking-[0.2em] font-medium">ココナラで相談する</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+
+            <div class="mt-20 pt-10 border-t border-slate-300 w-full flex flex-col md:flex-row justify-center items-center text-xs tracking-widest text-slate-500">
+                <p>&copy; 2025 ORIMONO DESIGN. All Rights Reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Simple Scroll Logic
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-[#FDFBF7]/90', 'backdrop-blur-md', 'shadow-sm', 'py-4');
+                nav.classList.remove('py-8', 'bg-transparent');
+            } else {
+                nav.classList.remove('bg-[#FDFBF7]/90', 'backdrop-blur-md', 'shadow-sm', 'py-4');
+                nav.classList.add('py-8', 'bg-transparent');
+            }
+        });
+    </script>
+</body>
+</html>
